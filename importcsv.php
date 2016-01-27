@@ -4,7 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     </head>
     <body>
-        <h1>Importação CSV</h1>
+        <h1>Importação Concluída</h1>
         <?php   
          include("../connect.php");  
                 
