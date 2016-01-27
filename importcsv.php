@@ -7,7 +7,10 @@
         <h1>Importação CSV</h1>
         <?php   
          include("../connect.php");  
-            $nome_arquivo = "../100.csv";
+                
+            foreach($_FILES["envsimulado"]["tmp_name"] as $nome_arquivo) { 
+               
+            //$nome_arquivo = $_FILES["envsimulado"]["tmp_name"][$i];
             $objeto = fopen($nome_arquivo, 'r');
             
             while(($dados = fgetcsv($objeto, 1000, ",")) !== FALSE){
@@ -21,7 +24,7 @@
                                  )
                         VALUES 
                                  (
-                                    '$dados[0]','$dados[1]','$dados[2]','$dados[3]','Simuado em rede-1',
+                                    '$dados[0]','$dados[1]','$dados[2]','$dados[3]','Simulado em rede-1',
                                      CURDATE(),'$str[10]','$str[11]','$$str[12]','$str[13]',
                                     '$str[14]','$str[15]','$str[16]','$str[17]','$str[18]',
                                     '$str[19]','$str[20]','$str[21]','$str[22]','$str[23]',
@@ -33,9 +36,11 @@
                 /*echo '<pre>';
                 print_r($dados);
                 print_r($str);
-                 echo '</pre>';*/
+                echo '</pre>';*/
             }
-            fclose($objeto);
+              fclose($objeto);            
+         }
+            
             echo "Processo Finalizado.";
         ?>
     </body>
