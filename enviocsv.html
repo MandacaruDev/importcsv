@@ -1,43 +1,51 @@
- <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Simulado</title>
-    </head>
-
+<meta charset="utf-8"/>
     <body>
-         <br/>
-         <br/>
-         <br/>
-         <br/>
-         <br/>
-         <br/>
         <fieldset>
             <form method="POST" action="importcsv.php" enctype="multipart/form-data">
-                <br/>
-                <b>Escolha o simulado:</b>
-                   <select name="sim">
-                        <option value="Simulado_01">Simulado_01</option>
-                        <option value="Simulado_02">Simulado_02</option>
-                        <option value="Simulado_03">Simulado_03</option>
-                        <option value="Simulado_04">Simulado_04</option>
-                        <option value="Simulado_05">Simulado_05</option>
-                        <option value="Simulado_06">Simulado_06</option>
-                        <option value="Simulado_07">Simulado_07</option>
-                        <option value="Simulado_08">Simulado_08</option>
-                        <option value="Simulado_09">Simulado_09</option>
-                        <option value="Simulado_10">Simulado_10</option>
-                   </select>
-                <br/>
-                <br/>
-                <b>Escolha os arquvios CSV:</b>
-                    <input type="file" name="envsimulado[]" multiple/>
-                <br/>
-                <br/>
-                    <input type="submit" value="Enviar" name="envcsv"/>
-                <br/>
+            <br/><br/><br/><br/>
+                <table align="center" width="500px" border="1"
+                    style="border-collapse:collapse" cellpadding=5>
+                    <tr bgcolor="#dfdfdf">           
+                        <td colspan=2><b>Envio de arquivo CSV</b></td>
+                    </tr>
+                    <tr bgcolor="#AEB5D8">
+                        <td colspan=2>Escolha o simulado a ser enviado</td>
+                    </tr>
+                    <tr>
+                        <td><b>Simulado:</b></td>
+                        <td>
+                            <select name="sim" style="width:200px">
+                                <option value="simulado_01">Simulado em rede 01</option>
+                                <option value="simulado_02">Simulado em rede 02</option>
+                                <option value="simulado_03">Simulado em rede 03</option>
+                                <option value="simulado_04">Simulado em rede 04</option>
+                                <option value="simulado_05">Simulado em rede 05</option>
+                                <option value="simulado_06">Simulado em rede 06</option>
+                                <option value="simulado_07">Simulado em rede 07</option>
+                                <option value="simulado_08">Simulado em rede 08</option>
+                                <option value="simulado_09">Simulado em rede 09</option>
+                                <option value="simulado_10">Simulado em rede 10</option>
+                            </select>
+                        </td>
+                    </tr>
+                    
+                    <tr bgcolor="#AEB5D8">
+                        <td colspan=2>Selecione os arquvivos CSV a serem enviado</td>
+                    </tr>
+                    <tr>
+                        <td><b>Arquivos:</b></td>
+                        <td>
+                            <input type="file" name="envsimulado[]" multiple/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" value="Enviar" name="envcsv"/></td>
+                    </tr>
+                </table>
+                <br/><br/><br/><br/><br/><br/><br/><br/>    
             </form>
         </fieldset>
     </body>
-
-</html> 
+</html>
