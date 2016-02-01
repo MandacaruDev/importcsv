@@ -6,7 +6,7 @@
     <body>
         <h1>Importação CSV</h1>
         <?php   
-         include("../exemplo.php"); 
+         include("../../config.php"); 
           
             $simu = $_POST["sim"];    
             foreach($_FILES["envsimulado"]["tmp_name"] as $nome_arquivo) { 
